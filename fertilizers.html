@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Resources - Farm Connect</title>
+
+    <style>
+        body {
+            background-color: #ecf0e5;
+            margin: 0;
+            padding: 0;
+            font-family: 'Varela Round', sans-serif;
+            color: #333;
+            transition: background-image 1s ease-in-out;
+        }
+
+        a {
+            color: #0e3109;
+            text-decoration: none;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #bfd7bc;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        header img {
+            position: absolute;
+            left: 10px;
+            width: 200px;
+            height: auto;
+            border-radius: 10%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Free Products Styles */
+        .free-products-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .product-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+            background-color: #a0c49d;
+            color: white;
+        }
+
+        .product-details {
+            flex: 1;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .product-details h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .product-details p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .product-image {
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-details:hover {
+            background-color: #8aae87;
+        }
+
+        .product-details:hover h2,
+        .product-details:hover p {
+            color: #fff;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Get Started Section */
+        #get-started {
+            background-color: #a0c49d;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .instruction-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8ec3b0; /* Theme color */
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .instruction-button:hover {
+            background-color: #9ed5c5; /* Darker theme color on hover */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #c4d7b2;
+            color: white;
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/Users/anvithareddybarry/Desktop/GNITS/logo.jpeg" alt="Logo">
+        <h1>Farm Connect</h1>
+        <h4>Farmer | Connect | Growth</h4>
+    </header>
+
+    <div class="free-products-container">
+        <div class="product-section" id="free-seeds">
+            <div class="product-details">
+                <h2>Free Seeds</h2>
+                <p>Explore a variety of high-quality seeds for your farm. Get started on your planting journey with our free seeds.</p>
+            </div>
+            <div class="product-image">
+                <!-- Placeholder Image -->
+            </div>
+        </div>
+
+        <div class="product-section" id="free-fertilizers">
+            <div class="product-details">
+                <h2>Free Fertilizers</h2>
+                <p>Boost the growth of your crops with our premium fertilizers. Claim your free fertilizers and nurture your farm.</p>
+            </div>
+            <div class="product-image">
+                <!-- Placeholder Image -->
+            </div>
+        </div>
+
+        <div class="product-section" id="free-pesticides">
+            <div class="product-details">
+                <h2>Free Pesticides</h2>
+                <p>Protect your crops from pests with our effective pesticides. Avail free pesticides to ensure a healthy harvest.</p>
+            </div>
+            <div class="product-image">
+                <!-- Placeholder Image -->
+            </div>
+        </div>
+
+        <div class="product-section" id="free-equipment">
+            <div class="product-details">
+                <h2>Free Equipment</h2>
+                <p>Enhance your farming experience with our free equipment. Access the tools you need for a successful harvest.</p>
+            </div>
+            <div class="product-image">
+                <!-- Placeholder Image -->
+            </div>
+        </div>
+    </div>
+
+    <section id="get-started">
+        <p>Join Farm Connect now to explore more free resources and empower yourself!</p>
+        <a href="InstructionEng.html" class="instruction-button">Guidelines</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 FARMCONNECT. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show the popup message
+        function showPopup(product) {
+            alert(`Your Free ${product} will be delivered once your sale is done.`);
+        }
+
+        // Event listeners for the product sections
+        document.getElementById('free-seeds').addEventListener('click', function() {
+            showPopup('Seeds');
+        });
+
+        document.getElementById('free-fertilizers').addEventListener('click', function() {
+            showPopup('Fertilizers');
+        });
+
+        document.getElementById('free-pesticides').addEventListener('click', function() {
+            showPopup('Pesticides');
+        });
+
+        document.getElementById('free-equipment').addEventListener('click', function() {
+            showPopup('Equipment');
+        });
+    </script>
+</body>
+</html>
